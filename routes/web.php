@@ -17,15 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/producto', function () {
+    return view('producto');
+});
+
 
 Route::get('/categoria', function () {
     return view('categoria');
-});
-
-// API
-Route::group(['prefix'=>'api'],function(){
-  Route::post('Categoria/add','API\CategoriaController@add');
-  Route::get('Categoria/list','API\CategoriaController@list');
-  Route::get('Categoria/disponible','API\CategoriaController@avalaible');
-  Route::post('Categoria/change-status','API\CategoriaController@change_status');
 });
